@@ -75,6 +75,8 @@ var host = window.location.hostname;
 		setTimeout(function(){location.reload();}, 3600000);
 		},
 		phone: {
+		ringTone: "sounds/Diggztone_Marimba.ogg",
+		ringbackTone: "sounds/ringback_uk.ogg",
 		onIncomingCall: function(event) {
    			var call = event.call;
 			console.log("******INCOMMING CALL*******");

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Indie Talk</title>
+    <link rel="icon" href="img/icons/phone-128.png">
+    <meta name="viewport" content="width=device-width,user-scalable=false">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/flat-ui.css">
+    <link rel="stylesheet" href="css/status.css">
+    <link rel="stylesheet" href="css/input_areas.css">
+	<script src="js/jquery-1.4.2.min.js"></script>
+  </head>
+  <body>
+	<div class="imagewrapper">
+		<img src="img/webrtc.png">
+	</div>
+  	<div id="loginview" class="views">
+		<form id="loginform" action="https://indieauth.com/auth" method="get">
+		  <input id="indie_auth_url" type="text" name="me" placeholder="yourdomain.com" />
+		  <input id="client_id" type="hidden" name="client_id" value=""/>
+		  <input type="hidden" name="redirect_uri" value="http://talk.1nd13.net/app/auth" />
+		  <input id="state" type="hidden" name="state" value="">
+		  <a href="#" onclick="document.getElementById('loginform').submit();">
+		  <p id="login"  class="btn btn-block btn-lg btn-success">Login with IndieAuth</p>
+	  	  </a>
+		</form>
+	</div>
+	<section role="status">
+	    <p id="status">Logged Out</p>
+	</section>
+	<script>
+		$("#client_id").val(window.location.origin)
+		$("#state").val(window.location.href+"call.html")
+	</script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+/*
+This is a CSS file. CSS (Cascading Style Sheets) is a language for describing the
+appearance of web pages. To create good-looking web pages, you need to learn CSS
+in order to define the appearance and location of the HTML elements within the pages.
+
+You can learn more about CSS here:
+https://developer.mozilla.org/learn/css
+
+This is a CSS comment. Anything inside these comment symbols will be ignored
+by the browser, which is handy for adding explanations to your code!
+*/
+
+/* This is a tag selector that matches the <body> element */
+body {
+  color: #333; /* Default font color for the app */
+  background-color: #eee; /* Default background color for the app */
+  font-family: "Open Sans", sans-serif; /* Default font style used in the app */
+}
+
+#container { 
+    margin:auto; 
+    background-color:#A9A9A9; 
+    width:300px; 
+    height:420px; 
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow:auto; 
+    border-radius: 5px; 
+	z-index: 10;
+}
+	
+#iframe { position:absolute; width:280px; height:400px; left:10px; top:10px; background-color:#ffffff; }
+
+/* This is a class selector that matches any element with class="hidden" */
+.hidden {
+  display: none; /* Hides the element that matches this rule */
+}
+
+.imagewrapper {
+  width: 40%; /* Or whatever width you want */
+}
+.imagewrapper img {
+  max-width: 100%;
+  height: auto;
+  width: auto; /* For IE8 */
+}

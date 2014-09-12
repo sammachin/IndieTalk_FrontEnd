@@ -66,6 +66,7 @@ var host = window.location.hostname;
 					$("#call").unbind()
 					$("#call").removeClass("btn-success").addClass("disabled");
 					$("#call").html("");
+					setTimeout(redirectToLogin,3000);
 				}
 				else{
 					$("#status").html("Waiting for Call");
@@ -93,6 +94,7 @@ var host = window.location.hostname;
 						$("#call").unbind()
 						$("#call").removeClass("btn-success").addClass("disabled");
 						$("#call").html("");
+						setTimeout(redirectToLogin,3000);
 					}
 					else{
 						$("#callinfo").html("Call From: " + data);
@@ -131,6 +133,7 @@ function call() {
 				$("#call").unbind()
 				$("#call").removeClass("btn-success").addClass("disabled");
 				$("#call").html("");
+				setTimeout(redirectToLogin,3000);
 			}
 			else{
 				var address = 'xmpp:'+data+'/phono';
@@ -172,6 +175,10 @@ function call() {
 function clearStatus(){
 	$("#callinfo").html("");
 	$("#status").html("Ready");
+}
+
+function redirectToLogin(){
+	window.location = window.location.href.replace('call.html', '');
 }
 
 function resetForNextCall(){

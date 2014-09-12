@@ -1,4 +1,4 @@
-IndieTalk_FrontEnd
+IndieTalk_ FrontEnd
 ==================
 
 Front End client code for Indie Talk
